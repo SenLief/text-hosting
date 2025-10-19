@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Text Hosting 使用指南 10 - 常见问题</title>
+    <style>
+      body { font-family: "Inter", system-ui, sans-serif; margin: 2rem auto; max-width: 760px; line-height: 1.6; color: #1f2937; }
+      h1 { color: #312e81; }
+      code { background: #eef2ff; padding: 0.2rem 0.35rem; border-radius: 6px; }
+      a { color: #2563eb; }
+    </style>
+  </head>
+  <body>
+    <h1>10. 常见问题</h1>
+    <dl>
+      <dt>Q: 浏览器刷新后令牌还在吗？</dt>
+      <dd>是的，令牌保存于 <code>localStorage</code>，除非手动清除。</dd>
+      <dt>Q: 无令牌能看到私有文档吗？</dt>
+      <dd>不能，私有文档需要匹配的令牌或有效的原始访问密钥。</dd>
+      <dt>Q: 是否支持导出所有版本？</dt>
+      <dd>目前可通过原始链接逐个下载，未来可扩展批量导出接口。</dd>
+      <dt>Q: 文档大小有限制吗？</dt>
+      <dd>受到 Cloudflare KV 限制，默认最大约 24 MB，具体值可通过 <code>MAX_FILE_SIZE</code> 配置。</dd>
+    </dl>
+    <p>如有更多需求，可调整后端存储、UI 或安全策略，适配企业场景。</p>
+  </body>
+</html>

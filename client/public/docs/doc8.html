@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Text Hosting 使用指南 8 - 原始视图</title>
+    <style>
+      body { font-family: "Inter", system-ui, sans-serif; margin: 2rem auto; max-width: 760px; line-height: 1.6; color: #1f2937; }
+      h1 { color: #312e81; }
+      code { background: #eef2ff; padding: 0.2rem 0.35rem; border-radius: 6px; }
+      a { color: #2563eb; }
+    </style>
+  </head>
+  <body>
+    <h1>8. 原始视图</h1>
+    <p>原始视图用于直接获取文本文字，无需界面渲染：</p>
+    <ul>
+      <li>原始链接可用于 curl、wget 等命令下拉取。</li>
+      <li>默认返回最新版本，附加 <code>?versionId=</code> 参数可指定历史版本。</li>
+      <li>私有文档需携带 <code>?rawKey=</code> 或令牌头部才能访问。</li>
+      <li>响应头包含 <code>content-disposition</code> 和 <code>content-type</code>，方便浏览器内联展示。</li>
+    </ul>
+    <p>建议将原始链接用于自动化脚本、CI 配置或其他系统集成场景。</p>
+  </body>
+</html>
